@@ -8,35 +8,34 @@ body {
     font-family: "Lato";
 }
 
-.section {
-    padding: 1.5rem 0;
-    font-size: 2rem;
+a {
+    color: #121212;
+}
+
+.header {
+    padding: 2rem 0;
+    @include grid-contain-2(80vw, 10rem, auto);
+    font-size: 1.5rem;
     text-transform: uppercase;
-    @include grid-contain-2(10rem, 1fr);
-    &__coucou,
-    &__salut {
-        padding: 0 2rem;
-        @include media(xl) {
-            padding: 0;
-        }
-    }
-    &__coucou {
-        justify-self: flex-end;
-        display: none;
-        @include media(xl) {
-            display: block;
-        }
-    }
-    &__salut {
+    &__logo {
         display: flex;
         align-items: center;
+    }
+    &__nav {
+        display: none;
+        @include media(sm) {
+            display: block;
+            align-items: center;
+            justify-self: flex-end;
+        }
+        &__list {
+            margin-left: 3rem;
+        }
     }
     .fas {
-        padding: 0 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        @include media(xl) {
+        display: block;
+        justify-self: flex-end;
+        @include media(sm) {
             display: none;
         }
     }

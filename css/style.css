@@ -151,44 +151,42 @@ body {
   font-family: "Lato";
 }
 
-.section {
-  padding: 1.5rem 0;
-  font-size: 2rem;
-  text-transform: uppercase;
-  max-width: 1320px;
+a {
+  color: #121212;
+}
+
+.header {
+  padding: 2rem 0;
+  max-width: 80vw;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 10rem 1fr;
+  grid-template-columns: 10rem auto;
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
-.section__coucou, .section__salut {
-  padding: 0 2rem;
+.header__logo {
+  display: flex;
+  align-items: center;
 }
-@media (min-width: 1400px) {
-  .section__coucou, .section__salut {
-    padding: 0;
-  }
-}
-.section__coucou {
-  justify-self: flex-end;
+.header__nav {
   display: none;
 }
-@media (min-width: 1400px) {
-  .section__coucou {
+@media (min-width: 768px) {
+  .header__nav {
     display: block;
+    align-items: center;
+    justify-self: flex-end;
   }
 }
-.section__salut {
-  display: flex;
-  align-items: center;
+.header__nav__list {
+  margin-left: 3rem;
 }
-.section .fas {
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+.header .fas {
+  display: block;
+  justify-self: flex-end;
 }
-@media (min-width: 1400px) {
-  .section .fas {
+@media (min-width: 768px) {
+  .header .fas {
     display: none;
   }
 }

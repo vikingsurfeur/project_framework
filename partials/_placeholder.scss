@@ -1,6 +1,6 @@
 // POSITION INNER FLEX CENTER-CENTER ROW
 
-%flex-center {
+%flex-center-row {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,4 +13,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+// POSITION ABSOLUTE CENTER-CENTER
+
+%position-absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
