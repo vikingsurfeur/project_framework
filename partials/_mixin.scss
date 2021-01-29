@@ -1,26 +1,26 @@
 // GRID MASTER
 
-@mixin grid-contain-2($numberA, $numberB) {
-    max-width: 1320px;
+@mixin grid-contain-2($argA, $argB, $argC) {
+    max-width: $argA;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: $numberA $numberB;
+    grid-template-columns: $argb $numberC;
 }
 
-@mixin grid-full-media($number, $media) {
+@mixin grid-full-media($argA, $media) {
     display: grid;
     @media screen and (min-width: $media) {
         grid-template-columns: repeat($number, 1fr);
     }
 }
 
-@mixin grid-contain-media($number, $media) {
-    max-width: 1320px;
+@mixin grid-contain-media($argA, $media, $argB) {
+    max-width: $argA;
     margin: 0 auto;
     display: grid;
     @media screen and (min-width: $media) {
         grid-template-columns: 
-        repeat($number, 1fr);
+        repeat($argB, 1fr);
     }
 }
 
