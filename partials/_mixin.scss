@@ -1,0 +1,41 @@
+// GRID MASTER
+
+@mixin grid-contain-2($numberA, $numberB) {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: $numberA $numberB;
+}
+
+@mixin grid-full-media($number, $media) {
+    display: grid;
+    @media screen and (min-width: $media) {
+        grid-template-columns: repeat($number, 1fr);
+    }
+}
+
+@mixin grid-contain-media($number, $media) {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    @media screen and (min-width: $media) {
+        grid-template-columns: 
+        repeat($number, 1fr);
+    }
+}
+
+// MEDIA QUERIES
+
+@mixin media($size) {
+    @if $size == xs {
+      @media (max-width: 572px) { @content; }
+    } @else if $size == sm {
+      @media (min-width: 768px) { @content; }
+    } @else if $size == md {
+      @media (min-width: 992px) { @content; }
+    } @else if $size == lg {
+      @media (min-width: 1200px) { @content; }
+    } @else if $size == xl {
+      @media (min-width: 1400px) { @content; }
+    }
+}

@@ -1,0 +1,43 @@
+// GLOBAL
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Lato";
+}
+
+.section {
+    padding: 1.5rem 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    @include grid-contain-2(10rem, 1fr);
+    &__coucou,
+    &__salut {
+        padding: 0 2rem;
+        @include media(xl) {
+            padding: 0;
+        }
+    }
+    &__coucou {
+        justify-self: flex-end;
+        display: none;
+        @include media(xl) {
+            display: block;
+        }
+    }
+    &__salut {
+        display: flex;
+        align-items: center;
+    }
+    .fas {
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        @include media(xl) {
+            display: none;
+        }
+    }
+}

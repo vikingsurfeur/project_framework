@@ -1,0 +1,11 @@
+{
+  "name": "essai_grid",
+  "version": "1.0.0",
+  "description": "essai grid",
+  "main": "main.js",
+  "scripts": {
+    "sass": "sass --watch ./partials/style.scss:./css/style.css"
+  },
+  "author": "David Bouscarle",
+  "license": "ISC"
+}
